@@ -18,14 +18,14 @@ jobs:
     steps:
       - uses: ros-tooling/setup-ros@v0.2
         with:
-          required-ros-distributions: foxy
+          required-ros-distributions: galactic
       - uses: actions/checkout@v1
       - name: start ursim
         run: |
           .github/dockerursim/build_and_run_docker_ursim.sh
       - uses: ros-tooling/action-ros-ci@v0.2
         with:
-          target-ros2-distro: foxy
+          target-ros2-distro: galactic
           # build all packages listed in the meta package
           package-name:
             ur_bringup

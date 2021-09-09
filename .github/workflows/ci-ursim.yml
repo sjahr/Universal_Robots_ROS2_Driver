@@ -7,13 +7,11 @@ on:
 
 jobs:
   ci_binary:
-    name: foxy UR Sim
+    name: galactic UR Sim
     runs-on: ubuntu-latest
     strategy:
       matrix:
         env:
-          - {ROS_DISTRO: rolling, ROS_REPO: main}
-          - {ROS_DISTRO: rolling, ROS_REPO: testing}
           - {ROS_DISTRO: galactic, ROS_REPO: main}
           - {ROS_DISTRO: galactic, ROS_REPO: testing}
     env:
